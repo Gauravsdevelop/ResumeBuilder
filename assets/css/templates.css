@@ -1,0 +1,100 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+@keyframes slideFromTop {
+    to {
+        transform: translateY(0);
+    }
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem; /* Adjust margin to avoid header overlap */
+    margin-bottom: 4rem; /* Adjust margin for footer */
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.templates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    width: 70%;
+    margin-top: 2rem;
+}
+
+.template {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smoother transition */
+    animation: none; /* Remove the fadeIn animation */
+}
+
+/* Hide all templates initially */
+.template {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.template:hover {
+    transform: translateY(-5px);
+}
+
+.template img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Smoother opacity transition */
+}
+
+.template:hover .overlay {
+    opacity: 1;
+}
+
+
+.overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.overlay p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 1rem;
+}
