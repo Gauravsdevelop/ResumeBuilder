@@ -11,5 +11,5 @@ This project is a simple resume builder using js and gemini . It allows users to
 - JavaScript  
 
 ## live Link 
-
+https://gauravsdevelop.github.io/ResumeBuilder/
     
